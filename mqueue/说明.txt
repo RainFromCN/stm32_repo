@@ -1,0 +1,30 @@
+
+
+/******************************************************************/
+说明，如果你们使用HAL库的话，学会调用下面这四个函数即可完成通信，非常简单
+
+MessageQueue_TypeDef    MQUEUE_Open(UART_HandleTypeDef* mq_uart);                                                   //创建消息队列实例
+void                    MQUEUE_Update(UART_HandleTypeDef* huart, MessageQueue_TypeDef* M);                          //更新消息队列
+void                    MQUEUE_Subscribe(MessageQueue_TypeDef* M, char* topic, uint32_t* to, uint8_t data_type);    //订阅消息
+void                    MQUEUE_Publish(UART_HandleTypeDef* huart, char* topic, uint32_t* from);                     //发布消息
+
+
+
+/******************************************************************/
+如果你们使用标准库的话，可以使用现成的通信协定，或者你们自己做一个，下面是现成的通信协定
+
+通信格式：
+@：起始符
+#：间隔符
+$：结束符
+
+起始符@和间隔符#之间插入变量名字，最多20字节
+间隔符#和结束符$之间插入固定5个字节，前四个字节用来保存int或者float类型的一个数据，第五个字节用作校验位
+
+举例：
+用[0xaa],[0x3f]表示一个byte，不带[]的均表示ASCII字符
+
+@key#[0x99][0x81][0x91][0x2d][0x87]$    
+
+分析：表示变量名为key，它的值为[0x99][0x81][0x91][0x2d]四个字节组成的int或者float(具体是Int还是float需要判断)。
+[0x87]是校验和，即除了三个符之外的所有字节的累加和，用来判断是否传输错误。

@@ -1,0 +1,801 @@
+please input the data
+ILI9488_DB0 ILI9488_DB0_PORT ILI9488_DB0_PIN
+ILI9488_DB1 ILI9488_DB1_PORT ILI9488_DB1_PIN
+ILI9488_DB2 ILI9488_DB2_PORT ILI9488_DB2_PIN
+ILI9488_DB3 ILI9488_DB3_PORT ILI9488_DB3_PIN
+ILI9488_DB4 ILI9488_DB4_PORT ILI9488_DB4_PIN
+ILI9488_DB5 ILI9488_DB5_PORT ILI9488_DB5_PIN
+ILI9488_DB6 ILI9488_DB6_PORT ILI9488_DB6_PIN
+ILI9488_DB7 ILI9488_DB7_PORT ILI9488_DB7_PIN
+ILI9488_DB8 ILI9488_DB8_PORT ILI9488_DB8_PIN
+ILI9488_DB9 ILI9488_DB9_PORT ILI9488_DB9_PIN
+ILI9488_DB10 ILI9488_DB10_PORT ILI9488_DB10_PIN
+ILI9488_DB11 ILI9488_DB11_PORT ILI9488_DB11_PIN
+ILI9488_DB12 ILI9488_DB12_PORT ILI9488_DB12_PIN
+ILI9488_DB13 ILI9488_DB13_PORT ILI9488_DB13_PIN
+ILI9488_DB14 ILI9488_DB14_PORT ILI9488_DB14_PIN
+ILI9488_DB15 ILI9488_DB15_PORT ILI9488_DB15_PIN
+ILI9488_CS ILI9488_CS_PORT ILI9488_CS_PIN
+ILI9488_RD ILI9488_RD_PORT ILI9488_RD_PIN
+ILI9488_WR ILI9488_WR_PORT ILI9488_WR_PIN
+ILI9488_RS ILI9488_RS_PORT ILI9488_RS_PIN
+end
+GPIO_TypeDef*       ILI9488_DB0_PORT
+uint16_t            ILI9488_DB0_PIN
+
+GPIO_TypeDef*       ILI9488_DB1_PORT
+uint16_t            ILI9488_DB1_PIN
+
+GPIO_TypeDef*       ILI9488_DB2_PORT
+uint16_t            ILI9488_DB2_PIN
+
+GPIO_TypeDef*       ILI9488_DB3_PORT
+uint16_t            ILI9488_DB3_PIN
+
+GPIO_TypeDef*       ILI9488_DB4_PORT
+uint16_t            ILI9488_DB4_PIN
+
+GPIO_TypeDef*       ILI9488_DB5_PORT
+uint16_t            ILI9488_DB5_PIN
+
+GPIO_TypeDef*       ILI9488_DB6_PORT
+uint16_t            ILI9488_DB6_PIN
+
+GPIO_TypeDef*       ILI9488_DB7_PORT
+uint16_t            ILI9488_DB7_PIN
+
+GPIO_TypeDef*       ILI9488_DB8_PORT
+uint16_t            ILI9488_DB8_PIN
+
+GPIO_TypeDef*       ILI9488_DB9_PORT
+uint16_t            ILI9488_DB9_PIN
+
+GPIO_TypeDef*       ILI9488_DB10_PORT
+uint16_t            ILI9488_DB10_PIN
+
+GPIO_TypeDef*       ILI9488_DB11_PORT
+uint16_t            ILI9488_DB11_PIN
+
+GPIO_TypeDef*       ILI9488_DB12_PORT
+uint16_t            ILI9488_DB12_PIN
+
+GPIO_TypeDef*       ILI9488_DB13_PORT
+uint16_t            ILI9488_DB13_PIN
+
+GPIO_TypeDef*       ILI9488_DB14_PORT
+uint16_t            ILI9488_DB14_PIN
+
+GPIO_TypeDef*       ILI9488_DB15_PORT
+uint16_t            ILI9488_DB15_PIN
+
+GPIO_TypeDef*       ILI9488_CS_PORT
+uint16_t            ILI9488_CS_PIN
+
+GPIO_TypeDef*       ILI9488_RD_PORT
+uint16_t            ILI9488_RD_PIN
+
+GPIO_TypeDef*       ILI9488_WR_PORT
+uint16_t            ILI9488_WR_PIN
+
+GPIO_TypeDef*       ILI9488_RS_PORT
+uint16_t            ILI9488_RS_PIN
+
+switch(ILI9488_DB0[1]) {
+        case 'A': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB0_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB0[3] == '\0') {
+        switch(ILI9488_DB0[2]) {
+                case '0': ILI9488_DB0_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB0_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB0_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB0_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB0_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB0_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB0_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB0_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB0_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB0_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB0[3]) {
+                case '0': ILI9488_DB0_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB0_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB0_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB0_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB0_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB0_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB1[1]) {
+        case 'A': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB1_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB1[3] == '\0') {
+        switch(ILI9488_DB1[2]) {
+                case '0': ILI9488_DB1_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB1_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB1_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB1_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB1_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB1_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB1_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB1_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB1_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB1_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB1[3]) {
+                case '0': ILI9488_DB1_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB1_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB1_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB1_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB1_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB1_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB2[1]) {
+        case 'A': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB2_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB2[3] == '\0') {
+        switch(ILI9488_DB2[2]) {
+                case '0': ILI9488_DB2_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB2_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB2_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB2_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB2_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB2_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB2_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB2_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB2_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB2_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB2[3]) {
+                case '0': ILI9488_DB2_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB2_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB2_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB2_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB2_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB2_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB3[1]) {
+        case 'A': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB3_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB3[3] == '\0') {
+        switch(ILI9488_DB3[2]) {
+                case '0': ILI9488_DB3_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB3_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB3_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB3_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB3_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB3_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB3_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB3_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB3_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB3_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB3[3]) {
+                case '0': ILI9488_DB3_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB3_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB3_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB3_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB3_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB3_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB4[1]) {
+        case 'A': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB4_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB4[3] == '\0') {
+        switch(ILI9488_DB4[2]) {
+                case '0': ILI9488_DB4_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB4_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB4_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB4_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB4_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB4_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB4_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB4_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB4_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB4_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB4[3]) {
+                case '0': ILI9488_DB4_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB4_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB4_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB4_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB4_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB4_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB5[1]) {
+        case 'A': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB5_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB5[3] == '\0') {
+        switch(ILI9488_DB5[2]) {
+                case '0': ILI9488_DB5_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB5_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB5_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB5_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB5_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB5_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB5_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB5_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB5_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB5_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB5[3]) {
+                case '0': ILI9488_DB5_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB5_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB5_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB5_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB5_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB5_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB6[1]) {
+        case 'A': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB6_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB6[3] == '\0') {
+        switch(ILI9488_DB6[2]) {
+                case '0': ILI9488_DB6_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB6_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB6_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB6_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB6_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB6_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB6_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB6_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB6_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB6_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB6[3]) {
+                case '0': ILI9488_DB6_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB6_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB6_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB6_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB6_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB6_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB7[1]) {
+        case 'A': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB7_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB7[3] == '\0') {
+        switch(ILI9488_DB7[2]) {
+                case '0': ILI9488_DB7_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB7_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB7_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB7_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB7_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB7_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB7_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB7_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB7_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB7_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB7[3]) {
+                case '0': ILI9488_DB7_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB7_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB7_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB7_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB7_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB7_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB8[1]) {
+        case 'A': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB8_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB8[3] == '\0') {
+        switch(ILI9488_DB8[2]) {
+                case '0': ILI9488_DB8_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB8_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB8_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB8_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB8_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB8_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB8_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB8_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB8_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB8_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB8[3]) {
+                case '0': ILI9488_DB8_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB8_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB8_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB8_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB8_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB8_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB9[1]) {
+        case 'A': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB9_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB9[3] == '\0') {
+        switch(ILI9488_DB9[2]) {
+                case '0': ILI9488_DB9_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB9_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB9_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB9_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB9_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB9_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB9_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB9_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB9_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB9_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB9[3]) {
+                case '0': ILI9488_DB9_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB9_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB9_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB9_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB9_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB9_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB10[1]) {
+        case 'A': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB10_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB10[3] == '\0') {
+        switch(ILI9488_DB10[2]) {
+                case '0': ILI9488_DB10_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB10_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB10_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB10_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB10_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB10_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB10_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB10_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB10_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB10_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB10[3]) {
+                case '0': ILI9488_DB10_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB10_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB10_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB10_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB10_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB10_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB11[1]) {
+        case 'A': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB11_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB11[3] == '\0') {
+        switch(ILI9488_DB11[2]) {
+                case '0': ILI9488_DB11_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB11_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB11_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB11_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB11_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB11_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB11_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB11_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB11_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB11_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB11[3]) {
+                case '0': ILI9488_DB11_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB11_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB11_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB11_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB11_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB11_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB12[1]) {
+        case 'A': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB12_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB12[3] == '\0') {
+        switch(ILI9488_DB12[2]) {
+                case '0': ILI9488_DB12_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB12_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB12_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB12_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB12_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB12_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB12_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB12_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB12_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB12_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB12[3]) {
+                case '0': ILI9488_DB12_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB12_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB12_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB12_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB12_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB12_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB13[1]) {
+        case 'A': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB13_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB13[3] == '\0') {
+        switch(ILI9488_DB13[2]) {
+                case '0': ILI9488_DB13_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB13_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB13_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB13_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB13_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB13_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB13_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB13_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB13_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB13_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB13[3]) {
+                case '0': ILI9488_DB13_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB13_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB13_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB13_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB13_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB13_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB14[1]) {
+        case 'A': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB14_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB14[3] == '\0') {
+        switch(ILI9488_DB14[2]) {
+                case '0': ILI9488_DB14_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB14_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB14_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB14_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB14_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB14_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB14_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB14_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB14_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB14_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB14[3]) {
+                case '0': ILI9488_DB14_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB14_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB14_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB14_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB14_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB14_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_DB15[1]) {
+        case 'A': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_DB15_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_DB15[3] == '\0') {
+        switch(ILI9488_DB15[2]) {
+                case '0': ILI9488_DB15_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_DB15_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_DB15_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_DB15_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_DB15_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_DB15_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_DB15_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_DB15_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_DB15_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_DB15_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_DB15[3]) {
+                case '0': ILI9488_DB15_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_DB15_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_DB15_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_DB15_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_DB15_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_DB15_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_CS[1]) {
+        case 'A': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_CS_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_CS[3] == '\0') {
+        switch(ILI9488_CS[2]) {
+                case '0': ILI9488_CS_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_CS_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_CS_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_CS_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_CS_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_CS_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_CS_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_CS_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_CS_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_CS_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_CS[3]) {
+                case '0': ILI9488_CS_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_CS_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_CS_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_CS_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_CS_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_CS_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_RD[1]) {
+        case 'A': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_RD_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_RD[3] == '\0') {
+        switch(ILI9488_RD[2]) {
+                case '0': ILI9488_RD_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_RD_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_RD_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_RD_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_RD_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_RD_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_RD_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_RD_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_RD_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_RD_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_RD[3]) {
+                case '0': ILI9488_RD_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_RD_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_RD_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_RD_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_RD_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_RD_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_WR[1]) {
+        case 'A': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_WR_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_WR[3] == '\0') {
+        switch(ILI9488_WR[2]) {
+                case '0': ILI9488_WR_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_WR_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_WR_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_WR_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_WR_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_WR_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_WR_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_WR_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_WR_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_WR_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_WR[3]) {
+                case '0': ILI9488_WR_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_WR_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_WR_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_WR_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_WR_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_WR_PIN = GPIO_PIN_15; break;
+        }
+}
+
+switch(ILI9488_RS[1]) {
+        case 'A': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOA_BASE; break;
+        case 'B': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOB_BASE; break;
+        case 'C': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOC_BASE; break;
+        case 'D': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOD_BASE; break;
+        case 'E': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOE_BASE; break;
+        case 'F': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOF_BASE; break;
+        case 'G': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOG_BASE; break;
+        case 'H': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOH_BASE; break;
+        case 'I': ILI9488_RS_PORT = (GPIO_TypeDef *)GPIOI_BASE; break;
+}
+if (ILI9488_RS[3] == '\0') {
+        switch(ILI9488_RS[2]) {
+                case '0': ILI9488_RS_PIN = GPIO_PIN_0; break;
+                case '1': ILI9488_RS_PIN = GPIO_PIN_1; break;
+                case '2': ILI9488_RS_PIN = GPIO_PIN_2; break;
+                case '3': ILI9488_RS_PIN = GPIO_PIN_3; break;
+                case '4': ILI9488_RS_PIN = GPIO_PIN_4; break;
+                case '5': ILI9488_RS_PIN = GPIO_PIN_5; break;
+                case '6': ILI9488_RS_PIN = GPIO_PIN_6; break;
+                case '7': ILI9488_RS_PIN = GPIO_PIN_7; break;
+                case '8': ILI9488_RS_PIN = GPIO_PIN_8; break;
+                case '9': ILI9488_RS_PIN = GPIO_PIN_9; break;
+        }
+}
+else {
+        switch (ILI9488_RS[3]) {
+                case '0': ILI9488_RS_PIN = GPIO_PIN_10; break;
+                case '1': ILI9488_RS_PIN = GPIO_PIN_11; break;
+                case '2': ILI9488_RS_PIN = GPIO_PIN_12; break;
+                case '3': ILI9488_RS_PIN = GPIO_PIN_13; break;
+                case '4': ILI9488_RS_PIN = GPIO_PIN_14; break;
+                case '5': ILI9488_RS_PIN = GPIO_PIN_15; break;
+        }
+}
